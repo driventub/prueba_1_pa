@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import ec.edu.uce.modelo.Propietario;
 import ec.edu.uce.modelo.Vehiculo;
 import ec.edu.uce.service.IGestorMatriculaService;
+import ec.edu.uce.service.IPropietarioService;
 
 /**
  * Problemas Actuales:
@@ -27,6 +28,14 @@ public class PruebaApplication implements CommandLineRunner {
 
 	@Autowired
 	private IGestorMatriculaService servicio;
+	
+	@Autowired
+	private IPropietarioService propietario;
+	
+
+	
+	
+	
 
 	private static final Logger LOG = LogManager.getLogger(PruebaApplication.class);
 
@@ -69,6 +78,8 @@ public class PruebaApplication implements CommandLineRunner {
 			this.servicio.imprimirVehiculo(v);
 			LOG.info("Matriculacion exitosa");
 		}
+		
+		this.propietario.imprimir(p);
 
 	}
 

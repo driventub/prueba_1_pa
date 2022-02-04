@@ -32,7 +32,7 @@ public class GestorMatriculaServiceImpl implements IGestorMatriculaService {
 		} else if (v.getTipo().contains("pesado")) {
 			this.pesado.matricularVehiculo(v, p);
 		} else {
-			LOG.fatal("No existe el tipo de vehiclo mencionado, matriculacion fallida");
+			LOG.fatal("No existe el tipo de vehiculo mencionado, matriculacion fallida");
 		}
 
 	}
@@ -46,7 +46,7 @@ public class GestorMatriculaServiceImpl implements IGestorMatriculaService {
 		} else if (v.getTipo().contains("pesado")) {
 			this.pesado.imprimirVehiculo(v);
 		} else {
-			LOG.fatal("No existe el tipo de vehiclo mencionado, impresion fallida");
+			LOG.fatal("No existe el tipo de vehiculo mencionado, impresion fallida");
 		}
 
 	}
